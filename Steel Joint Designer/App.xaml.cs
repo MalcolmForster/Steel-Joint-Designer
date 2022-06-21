@@ -32,11 +32,9 @@ using System.Windows.Shell;
 using Welded_Joint_Designer;
 
 
-namespace Welded_Joint_Designer
+namespace Steel_Joint_Designer
 
 {
-
-
     /// <summary>
     /// App
     /// </summary>
@@ -66,7 +64,7 @@ namespace Welded_Joint_Designer
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.0.0.0")]
         public static void Main()
         {
-            Welded_Joint_Designer.App app = new Welded_Joint_Designer.App();
+            Steel_Joint_Designer.App app = new Steel_Joint_Designer.App();
             app.InitializeComponent();
             app.Run();
         }

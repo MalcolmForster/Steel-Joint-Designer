@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Welded_Joint_Designer
+namespace Steel_Joint_Designer
 {
     //Calculation for the fillet weld group from 1997 3404 method:
     /*

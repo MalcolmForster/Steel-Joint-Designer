@@ -1,3 +1,0 @@
-TODO list for welded joint designer:
-
-Arrayify all infomation from the WPF window and send to the weldgroupstrength file.

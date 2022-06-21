@@ -15,7 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Welded_Joint_Designer
+namespace Steel_Joint_Designer
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{A9C7D7D4-6299-450C-9283-AA63A3B3D9E4}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Welded_Joint_Designer</RootNamespace>
-    <AssemblyName>Welded Joint Designer</AssemblyName>
+    <RootNamespace>Steel_Joint_Designer</RootNamespace>
+    <AssemblyName>Steel Joint Designer</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

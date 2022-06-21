@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 
 
-namespace Welded_Joint_Designer
+namespace Steel_Joint_Designer
 {
     internal class WeldSizer
     {
