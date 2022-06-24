@@ -1,0 +1,88 @@
+﻿<Window x:Class="Steel_Joint_Designer.JointDraw"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+        xmlns:local="clr-namespace:Steel_Joint_Designer"
+        mc:Ignorable="d"
+        Title="JointDraw" Height="800" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="5"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Name="JointDrawTools" Grid.Column="1">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="5"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="1" Background="AliceBlue">
+                <TextBlock HorizontalAlignment="Center" Margin="5" ><Italic>Canvas Properties</Italic></TextBlock>
+                <TextBlock>Canvas View Width (m):</TextBlock>
+                <TextBox x:Name="nameInput" Margin="5"/>
+                <Button Margin="5" Name="cavasView" Click="Canvas_View">Accept</Button>
+            </StackPanel>        
+            
+            <StackPanel Grid.Row="2" Background="Aqua">
+                <TextBlock Margin="10" HorizontalAlignment="Center"><Italic>Joint Skeleton</Italic><Italic/></TextBlock>
+                <Button Margin="10" Name="InsNode"      Click="Change_Cursor">Place Node</Button>
+                <Button Margin="10" Name="InsBeam"      Click="Change_Cursor">Insert Beam</Button>
+                <Button Margin="10" Name="InsCol"       Click="Change_Cursor">Insert Column</Button>
+                <Button Margin="10" Name="InsAngEle"    Click="Change_Cursor">Insert Angled Element</Button>
+                <Button Margin="10" Name="DeleteEle"    Click="Change_Cursor">Delete Element</Button>
+                <Button Margin="10" Name="AlignEle"     Click="Change_Cursor">Align Elements</Button>
+            </StackPanel>
+
+            <StackPanel Grid.Row="3" Background="Aquamarine">
+                <TextBlock Margin="10" HorizontalAlignment="Center"><Italic>Element Painter</Italic></TextBlock>
+
+                <TextBlock>Beams:</TextBlock>
+                <ComboBox Name="beams" Height="20"  Margin="5,10,5,5"></ComboBox>
+                <Button Name ="enableBeamPaint" Margin="5" Click="Draw_Element">Draw Beam</Button>
+
+                <TextBlock>Columns:</TextBlock>                    
+                <ComboBox Name="columns" Height="20"  Margin="5,10,5,5"></ComboBox>
+                <Button Name ="enableColumnPaint" Margin="5" Click="Draw_Element">Draw Column</Button>                
+            </StackPanel>
+
+            <TextBlock Grid.Column="1" Grid.Row="6" HorizontalAlignment="Center"><Italic>Quick Select Joint Style:</Italic></TextBlock>
+            <ComboBox Name="jointTypes" Grid.Column="1" Grid.Row="6" Height="20"  Margin="5,10,5,5"></ComboBox>
+        </Grid>
+
+        <Border Grid.Column="2" BorderThickness="2" BorderBrush="LightGray" Margin="5">
+            <Canvas x:Name="JointDrawCanvas"  Background="WhiteSmoke" MouseLeftButtonDown="Canvas_Click">
+                <!--
+            Things to add:
+            Top right corner mouse coordinate system            
+            A change view button to show joint from each direction
+            -->
+
+
+
+            </Canvas>
+        </Border>
+
+        <DockPanel Name ="ViewRotate" Grid.Column="2" Width="90" Height="90" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10">
+
+            <Button Height="30" Width="50" FontSize="10" DockPanel.Dock="Top">Top</Button>
+            <Button Height="30" Width="50" FontSize="10" DockPanel.Dock="Bottom">Bottom</Button>
+            <Button Height="30" Width="30" FontSize="10" DockPanel.Dock="Left">Left</Button>
+            <Button Height="30" Width="30" FontSize="10" DockPanel.Dock="Left">Front</Button>
+            <Button Height="30" Width="30" FontSize="10" DockPanel.Dock="Right">Right</Button>
+
+        </DockPanel>
+
+    </Grid>
+</Window>

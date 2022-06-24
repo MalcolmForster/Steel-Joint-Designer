@@ -757,6 +757,8 @@
                 <ColumnDefinition Width="auto" />
                 <ColumnDefinition Width="auto" />
                 <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="20" />
             </Grid.ColumnDefinitions>
@@ -769,6 +771,14 @@
 
             <Button x:Name="clear" Grid.Column="3" Grid.Row="1" Height="25" Width="50" Click="Clear_Click" Margin="5">
                 Clear
+            </Button>
+
+            <Button x:Name="editCurrentJoint" Grid.Column="4" Grid.Row="1" Height="25" Width="200" Click="Draw_Current_Joint" Margin="5">
+                Edit Above Joint
+            </Button>
+
+            <Button x:Name="drawCustomJoint" Grid.Column="5" Grid.Row="1" Height="25" Width="200" Click="Draw_New_Joint" Margin="5">
+                Draw Custom Joint
             </Button>
 
         </Grid>

@@ -37,13 +37,13 @@ namespace Steel_Joint_Designer
 
         Dictionary<string, string[][]> TXTedited = new Dictionary<string, string[][]>();
 
+        ItemCollection tabs;
 
         public void PrepareData()
         {
 
             bool error = false;
-            ItemCollection tabs = connectionTabs.Items;
-
+            tabs = connectionTabs.Items;
 
             //-----------------------AUTOSET INFO FOR TESTING------------------------
             //remove this section when finished testing
@@ -390,9 +390,31 @@ namespace Steel_Joint_Designer
 
             }
 
-            WeldGroupStrength win2 = new WeldGroupStrength(selectedCalc, jointEles, weldMetalData, calcType);
-            win2.Show();
+            WeldGroupStrength wgsWin = new WeldGroupStrength(selectedCalc, jointEles, weldMetalData, calcType);
+            wgsWin.Show();
 
+        }
+
+        public void Open_Draw_Window()
+        {
+            List<string> tabHeaders = new List<string>();
+
+            foreach (TabItem tab in tabs){
+                tabHeaders.Add(tab.Header.ToString());
+            }
+            
+            JointDraw jointDraw = new JointDraw(tabHeaders);
+            jointDraw.Show();
+        }
+
+        public void Draw_Current_Joint(object sender, RoutedEventArgs e)
+        {
+            Open_Draw_Window();
+        }
+
+        public void Draw_New_Joint(object sender, RoutedEventArgs e)
+        {
+            Open_Draw_Window();
         }
 
     }

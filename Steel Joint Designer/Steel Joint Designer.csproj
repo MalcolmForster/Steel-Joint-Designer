@@ -54,11 +54,18 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="JointDraw.xaml.cs">
+      <DependentUpon>JointDraw.xaml</DependentUpon>
+    </Compile>
     <Compile Include="JointElement.cs" />
     <Compile Include="WeldSizer.cs" />
     <Compile Include="WeldGroupStrength.xaml.cs">
       <DependentUpon>WeldGroupStrength.xaml</DependentUpon>
     </Compile>
+    <Page Include="JointDraw.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
