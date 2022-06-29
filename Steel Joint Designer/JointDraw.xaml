@@ -62,7 +62,7 @@
         </Grid>
 
         <Border Grid.Column="2" BorderThickness="2" BorderBrush="LightGray" Margin="5">
-            <Canvas x:Name="JointDrawCanvas"  Background="WhiteSmoke" MouseLeftButtonDown="Canvas_Click">
+            <Canvas x:Name="JointDrawCanvas"  Background="WhiteSmoke" MouseLeftButtonDown="Canvas_Click" MouseMove="Mouse_Move">
                 <!--
             Things to add:
             Top right corner mouse coordinate system            
