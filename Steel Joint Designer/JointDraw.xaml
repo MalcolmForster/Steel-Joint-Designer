@@ -43,6 +43,7 @@
                 <Button Margin="10" Name="InsAngEle"    Click="Change_Cursor">Insert Angled Element</Button>
                 <Button Margin="10" Name="DeleteEle"    Click="Change_Cursor">Delete Element</Button>
                 <Button Margin="10" Name="AlignEle"     Click="Change_Cursor">Align Elements</Button>
+                <Button Margin="10" Name="DimEle"       Click="Change_Cursor">Dimension Elements</Button>
             </StackPanel>
 
             <StackPanel Grid.Row="3" Background="Aquamarine">
@@ -57,9 +58,20 @@
                 <Button Name ="enableColumnPaint" Margin="5" Click="Draw_Element">Draw Column</Button>                
             </StackPanel>
 
+            <TextBlock Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center"><Italic>Hint:</Italic></TextBlock>
+            <TextBox Name="Hints" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Center" IsReadOnly="True" Width="140" TextWrapping="Wrap"></TextBox>
+
             <TextBlock Grid.Column="1" Grid.Row="6" HorizontalAlignment="Center"><Italic>Quick Select Joint Style:</Italic></TextBlock>
             <ComboBox Name="jointTypes" Grid.Column="1" Grid.Row="6" Height="20"  Margin="5,10,5,5"></ComboBox>
         </Grid>
+
+        <Popup Name="AlignDir" Width="200" Height="210" IsOpen="False">
+            <StackPanel>
+                <Button Margin ="10" Name="HorzAlign" Click="Horz_Align" Height="50">Align Horizontally</Button>
+                <Button Margin ="10" Name="VertAlign" Click="Vert_Align" Height="50">Align Vertically</Button>
+                <Button Margin ="10" Name="CancelAlign" Click="Cancel_Align" Height="50">Cancel Alignment</Button>
+            </StackPanel>
+        </Popup>
 
         <Border Grid.Column="2" BorderThickness="2" BorderBrush="LightGray" Margin="5">
             <Canvas x:Name="JointDrawCanvas"  Background="WhiteSmoke" MouseLeftButtonDown="Canvas_Click" MouseMove="Mouse_Move">
@@ -68,9 +80,6 @@
             Top right corner mouse coordinate system            
             A change view button to show joint from each direction
             -->
-
-
-
             </Canvas>
         </Border>
 
